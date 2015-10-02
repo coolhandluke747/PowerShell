@@ -646,7 +646,7 @@ function ConnectAzureRMS
 # Gives permission to mailbox as username@address.com and opens mailbox in IE
 function OpenIEAdmin
 {
-    ConnectEXO
+    ConnectEXO/EOP
 
     $email = Read-Host 'Email Address'
     if((o365BoxExists($email)) -eq $true){
@@ -667,7 +667,7 @@ function OpenIEAdmin
 # Gives permission to mailbox as username@address.com and opens mailbox in Chrome
 function OpenChromeAdmin
 {
-    ConnectEXO
+    ConnectEXO/EOP
     
     $email = Read-Host 'Email Address'
     if((o365BoxExists($email)) -eq $true){
@@ -689,7 +689,7 @@ function OpenChromeAdmin
 # Gives permission to mailbox as username@address.com or other specified mailbox and opens mailbox in IE 
 function OpenIEEmail
 {
-    ConnectEXO
+    ConnectEXO/EOP
 
     $email  = Read-Host 'Email Address'
     
@@ -760,7 +760,7 @@ function OpenIEEmail
 function OpenChromeEmail
 {
 
-    ConnectEXO
+    ConnectEXO/EOP
 
     $email  = Read-Host 'Email Address'
     
@@ -837,7 +837,7 @@ function OpenChromeEmail
 # Gets users information on browser, devices, etc by default for 3 days or other if specified
 function Get-UserInfo
 {
-    ConnectEXO
+    ConnectEXO/EOP
 
     $email  = Read-Host 'Email Address or Username of User'
     $days = Read-Host "How many days do you want a report back from today? (Default is 3 days if left empty)"
@@ -910,7 +910,7 @@ TD {border-width: 1px;padding: 3px;border-style: solid;border-color: black;}
 # Grants username@address.com or other if specified access to all mailboxes in tenant
 function GrantPermissionToAllMailboxes
 {
-    ConnectEXO
+    ConnectEXO/EOP
 
     $user  = Read-Host "Who do you want to give all Read & Send Access to all Mailboxes? (Default is username@address.com if left empty)"
     
@@ -1015,7 +1015,7 @@ function GrantPermissionToAllMailboxes
 function RemovePermissionToAllMailboxes
 {
 
-    ConnectEXO
+    ConnectEXO/EOP
 
     $user  = Read-Host "Who do you want to remove all Read & Send Access to all Mailboxes? (Default is username@address.com if left empty)"
     
@@ -1103,7 +1103,7 @@ function RemovePermissionToAllMailboxes
 # Removes username@address.com or other if specified access to a specific mailbox
 function RemovePermissionToMailbox
 {
-    ConnectEXO
+    ConnectEXO/EOP
 
     $email  = Read-Host "Which Mailbox do you want to Remove Read & Send Access?"
     $user = Read-Host "Which do you want to remove from $email`? (Default is username@address.com if left empty)"
@@ -1132,7 +1132,7 @@ function RemovePermissionToMailbox
 # Checks forwarding and gives the option to change it to something else or nothing
 function CheckForwarding
 {
-    ConnectEXO
+    ConnectEXO/EOP
 
     $email = Read-Host "Which email do you want to check forwarding?"
     
